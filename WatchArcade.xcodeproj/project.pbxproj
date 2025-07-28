@@ -1,0 +1,964 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C9A7F032E37111A00C88391 /* WatchArcade Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9C9A7F022E37111A00C88391 /* WatchArcade Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C9A7EED2E37111A00C88391 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C9A7ED72E37111600C88391 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C9A7EDE2E37111700C88391;
+			remoteInfo = WatchArcade;
+		};
+		9C9A7EF72E37111A00C88391 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C9A7ED72E37111600C88391 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C9A7EDE2E37111700C88391;
+			remoteInfo = WatchArcade;
+		};
+		9C9A7F042E37111A00C88391 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C9A7ED72E37111600C88391 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C9A7F012E37111A00C88391;
+			remoteInfo = "WatchArcade Watch App";
+		};
+		9C9A7F122E37111D00C88391 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C9A7ED72E37111600C88391 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C9A7F012E37111A00C88391;
+			remoteInfo = "WatchArcade Watch App";
+		};
+		9C9A7F1C2E37111D00C88391 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C9A7ED72E37111600C88391 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C9A7F012E37111A00C88391;
+			remoteInfo = "WatchArcade Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9C9A7F282E37111D00C88391 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9C9A7F032E37111A00C88391 /* WatchArcade Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9C9A7EDF2E37111700C88391 /* WatchArcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchArcade.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C9A7EEC2E37111A00C88391 /* WatchArcadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchArcadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C9A7EF62E37111A00C88391 /* WatchArcadeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchArcadeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C9A7F022E37111A00C88391 /* WatchArcade Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchArcade Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C9A7F112E37111D00C88391 /* WatchArcade Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WatchArcade Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C9A7F1B2E37111D00C88391 /* WatchArcade Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WatchArcade Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9C9A7EE12E37111700C88391 /* WatchArcade */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WatchArcade;
+			sourceTree = "<group>";
+		};
+		9C9A7EEF2E37111A00C88391 /* WatchArcadeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WatchArcadeTests;
+			sourceTree = "<group>";
+		};
+		9C9A7EF92E37111A00C88391 /* WatchArcadeUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WatchArcadeUITests;
+			sourceTree = "<group>";
+		};
+		9C9A7F062E37111A00C88391 /* WatchArcade Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "WatchArcade Watch App";
+			sourceTree = "<group>";
+		};
+		9C9A7F142E37111D00C88391 /* WatchArcade Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "WatchArcade Watch AppTests";
+			sourceTree = "<group>";
+		};
+		9C9A7F1E2E37111D00C88391 /* WatchArcade Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "WatchArcade Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C9A7EDC2E37111700C88391 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7EE92E37111A00C88391 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7EF32E37111A00C88391 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7EFF2E37111A00C88391 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7F0E2E37111D00C88391 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7F182E37111D00C88391 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C9A7ED62E37111600C88391 = {
+			isa = PBXGroup;
+			children = (
+				9C9A7EE12E37111700C88391 /* WatchArcade */,
+				9C9A7EEF2E37111A00C88391 /* WatchArcadeTests */,
+				9C9A7EF92E37111A00C88391 /* WatchArcadeUITests */,
+				9C9A7F062E37111A00C88391 /* WatchArcade Watch App */,
+				9C9A7F142E37111D00C88391 /* WatchArcade Watch AppTests */,
+				9C9A7F1E2E37111D00C88391 /* WatchArcade Watch AppUITests */,
+				9C9A7EE02E37111700C88391 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C9A7EE02E37111700C88391 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C9A7EDF2E37111700C88391 /* WatchArcade.app */,
+				9C9A7EEC2E37111A00C88391 /* WatchArcadeTests.xctest */,
+				9C9A7EF62E37111A00C88391 /* WatchArcadeUITests.xctest */,
+				9C9A7F022E37111A00C88391 /* WatchArcade Watch App.app */,
+				9C9A7F112E37111D00C88391 /* WatchArcade Watch AppTests.xctest */,
+				9C9A7F1B2E37111D00C88391 /* WatchArcade Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C9A7EDE2E37111700C88391 /* WatchArcade */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C9A7F292E37111D00C88391 /* Build configuration list for PBXNativeTarget "WatchArcade" */;
+			buildPhases = (
+				9C9A7EDB2E37111700C88391 /* Sources */,
+				9C9A7EDC2E37111700C88391 /* Frameworks */,
+				9C9A7EDD2E37111700C88391 /* Resources */,
+				9C9A7F282E37111D00C88391 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C9A7F052E37111A00C88391 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9C9A7EE12E37111700C88391 /* WatchArcade */,
+			);
+			name = WatchArcade;
+			packageProductDependencies = (
+			);
+			productName = WatchArcade;
+			productReference = 9C9A7EDF2E37111700C88391 /* WatchArcade.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C9A7EEB2E37111A00C88391 /* WatchArcadeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C9A7F2C2E37111D00C88391 /* Build configuration list for PBXNativeTarget "WatchArcadeTests" */;
+			buildPhases = (
+				9C9A7EE82E37111A00C88391 /* Sources */,
+				9C9A7EE92E37111A00C88391 /* Frameworks */,
+				9C9A7EEA2E37111A00C88391 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C9A7EEE2E37111A00C88391 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9C9A7EEF2E37111A00C88391 /* WatchArcadeTests */,
+			);
+			name = WatchArcadeTests;
+			packageProductDependencies = (
+			);
+			productName = WatchArcadeTests;
+			productReference = 9C9A7EEC2E37111A00C88391 /* WatchArcadeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9C9A7EF52E37111A00C88391 /* WatchArcadeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C9A7F2F2E37111D00C88391 /* Build configuration list for PBXNativeTarget "WatchArcadeUITests" */;
+			buildPhases = (
+				9C9A7EF22E37111A00C88391 /* Sources */,
+				9C9A7EF32E37111A00C88391 /* Frameworks */,
+				9C9A7EF42E37111A00C88391 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C9A7EF82E37111A00C88391 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9C9A7EF92E37111A00C88391 /* WatchArcadeUITests */,
+			);
+			name = WatchArcadeUITests;
+			packageProductDependencies = (
+			);
+			productName = WatchArcadeUITests;
+			productReference = 9C9A7EF62E37111A00C88391 /* WatchArcadeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9C9A7F012E37111A00C88391 /* WatchArcade Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C9A7F252E37111D00C88391 /* Build configuration list for PBXNativeTarget "WatchArcade Watch App" */;
+			buildPhases = (
+				9C9A7EFE2E37111A00C88391 /* Sources */,
+				9C9A7EFF2E37111A00C88391 /* Frameworks */,
+				9C9A7F002E37111A00C88391 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9C9A7F062E37111A00C88391 /* WatchArcade Watch App */,
+			);
+			name = "WatchArcade Watch App";
+			packageProductDependencies = (
+			);
+			productName = "WatchArcade Watch App";
+			productReference = 9C9A7F022E37111A00C88391 /* WatchArcade Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C9A7F102E37111D00C88391 /* WatchArcade Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C9A7F322E37111D00C88391 /* Build configuration list for PBXNativeTarget "WatchArcade Watch AppTests" */;
+			buildPhases = (
+				9C9A7F0D2E37111D00C88391 /* Sources */,
+				9C9A7F0E2E37111D00C88391 /* Frameworks */,
+				9C9A7F0F2E37111D00C88391 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C9A7F132E37111D00C88391 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9C9A7F142E37111D00C88391 /* WatchArcade Watch AppTests */,
+			);
+			name = "WatchArcade Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "WatchArcade Watch AppTests";
+			productReference = 9C9A7F112E37111D00C88391 /* WatchArcade Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9C9A7F1A2E37111D00C88391 /* WatchArcade Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C9A7F352E37111D00C88391 /* Build configuration list for PBXNativeTarget "WatchArcade Watch AppUITests" */;
+			buildPhases = (
+				9C9A7F172E37111D00C88391 /* Sources */,
+				9C9A7F182E37111D00C88391 /* Frameworks */,
+				9C9A7F192E37111D00C88391 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C9A7F1D2E37111D00C88391 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9C9A7F1E2E37111D00C88391 /* WatchArcade Watch AppUITests */,
+			);
+			name = "WatchArcade Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "WatchArcade Watch AppUITests";
+			productReference = 9C9A7F1B2E37111D00C88391 /* WatchArcade Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C9A7ED72E37111600C88391 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					9C9A7EDE2E37111700C88391 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					9C9A7EEB2E37111A00C88391 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 9C9A7EDE2E37111700C88391;
+					};
+					9C9A7EF52E37111A00C88391 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 9C9A7EDE2E37111700C88391;
+					};
+					9C9A7F012E37111A00C88391 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					9C9A7F102E37111D00C88391 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 9C9A7F012E37111A00C88391;
+					};
+					9C9A7F1A2E37111D00C88391 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 9C9A7F012E37111A00C88391;
+					};
+				};
+			};
+			buildConfigurationList = 9C9A7EDA2E37111600C88391 /* Build configuration list for PBXProject "WatchArcade" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C9A7ED62E37111600C88391;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9C9A7EE02E37111700C88391 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C9A7EDE2E37111700C88391 /* WatchArcade */,
+				9C9A7EEB2E37111A00C88391 /* WatchArcadeTests */,
+				9C9A7EF52E37111A00C88391 /* WatchArcadeUITests */,
+				9C9A7F012E37111A00C88391 /* WatchArcade Watch App */,
+				9C9A7F102E37111D00C88391 /* WatchArcade Watch AppTests */,
+				9C9A7F1A2E37111D00C88391 /* WatchArcade Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C9A7EDD2E37111700C88391 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7EEA2E37111A00C88391 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7EF42E37111A00C88391 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7F002E37111A00C88391 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7F0F2E37111D00C88391 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7F192E37111D00C88391 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C9A7EDB2E37111700C88391 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7EE82E37111A00C88391 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7EF22E37111A00C88391 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7EFE2E37111A00C88391 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7F0D2E37111D00C88391 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C9A7F172E37111D00C88391 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C9A7EEE2E37111A00C88391 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C9A7EDE2E37111700C88391 /* WatchArcade */;
+			targetProxy = 9C9A7EED2E37111A00C88391 /* PBXContainerItemProxy */;
+		};
+		9C9A7EF82E37111A00C88391 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C9A7EDE2E37111700C88391 /* WatchArcade */;
+			targetProxy = 9C9A7EF72E37111A00C88391 /* PBXContainerItemProxy */;
+		};
+		9C9A7F052E37111A00C88391 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C9A7F012E37111A00C88391 /* WatchArcade Watch App */;
+			targetProxy = 9C9A7F042E37111A00C88391 /* PBXContainerItemProxy */;
+		};
+		9C9A7F132E37111D00C88391 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C9A7F012E37111A00C88391 /* WatchArcade Watch App */;
+			targetProxy = 9C9A7F122E37111D00C88391 /* PBXContainerItemProxy */;
+		};
+		9C9A7F1D2E37111D00C88391 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C9A7F012E37111A00C88391 /* WatchArcade Watch App */;
+			targetProxy = 9C9A7F1C2E37111D00C88391 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9C9A7F232E37111D00C88391 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = XLA5QQ65S8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C9A7F242E37111D00C88391 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = XLA5QQ65S8;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		9C9A7F262E37111D00C88391 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XLA5QQ65S8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchArcade;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.DelphiGamerz.WatchArcade;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DelphiGamerz.WatchArcade.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		9C9A7F272E37111D00C88391 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XLA5QQ65S8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchArcade;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.DelphiGamerz.WatchArcade;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DelphiGamerz.WatchArcade.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Release;
+		};
+		9C9A7F2A2E37111D00C88391 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XLA5QQ65S8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchArcade;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DelphiGamerz.WatchArcade;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C9A7F2B2E37111D00C88391 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XLA5QQ65S8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchArcade;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DelphiGamerz.WatchArcade;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C9A7F2D2E37111D00C88391 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XLA5QQ65S8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DelphiGamerz.WatchArcadeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchArcade.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WatchArcade";
+			};
+			name = Debug;
+		};
+		9C9A7F2E2E37111D00C88391 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XLA5QQ65S8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DelphiGamerz.WatchArcadeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchArcade.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WatchArcade";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C9A7F302E37111D00C88391 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XLA5QQ65S8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DelphiGamerz.WatchArcadeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WatchArcade;
+			};
+			name = Debug;
+		};
+		9C9A7F312E37111D00C88391 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XLA5QQ65S8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DelphiGamerz.WatchArcadeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WatchArcade;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C9A7F332E37111D00C88391 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XLA5QQ65S8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DelphiGamerz.WatchArcade-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchArcade Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WatchArcade Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		9C9A7F342E37111D00C88391 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XLA5QQ65S8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DelphiGamerz.WatchArcade-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchArcade Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WatchArcade Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Release;
+		};
+		9C9A7F362E37111D00C88391 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XLA5QQ65S8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DelphiGamerz.WatchArcade-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "WatchArcade Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		9C9A7F372E37111D00C88391 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XLA5QQ65S8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DelphiGamerz.WatchArcade-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "WatchArcade Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C9A7EDA2E37111600C88391 /* Build configuration list for PBXProject "WatchArcade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9A7F232E37111D00C88391 /* Debug */,
+				9C9A7F242E37111D00C88391 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C9A7F252E37111D00C88391 /* Build configuration list for PBXNativeTarget "WatchArcade Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9A7F262E37111D00C88391 /* Debug */,
+				9C9A7F272E37111D00C88391 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C9A7F292E37111D00C88391 /* Build configuration list for PBXNativeTarget "WatchArcade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9A7F2A2E37111D00C88391 /* Debug */,
+				9C9A7F2B2E37111D00C88391 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C9A7F2C2E37111D00C88391 /* Build configuration list for PBXNativeTarget "WatchArcadeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9A7F2D2E37111D00C88391 /* Debug */,
+				9C9A7F2E2E37111D00C88391 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C9A7F2F2E37111D00C88391 /* Build configuration list for PBXNativeTarget "WatchArcadeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9A7F302E37111D00C88391 /* Debug */,
+				9C9A7F312E37111D00C88391 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C9A7F322E37111D00C88391 /* Build configuration list for PBXNativeTarget "WatchArcade Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9A7F332E37111D00C88391 /* Debug */,
+				9C9A7F342E37111D00C88391 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C9A7F352E37111D00C88391 /* Build configuration list for PBXNativeTarget "WatchArcade Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9A7F362E37111D00C88391 /* Debug */,
+				9C9A7F372E37111D00C88391 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C9A7ED72E37111600C88391 /* Project object */;
+}
