@@ -154,9 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				9C9A7EE12E37111700C88391 /* WatchArcade */,
+				9C9A7F062E37111A00C88391 /* WatchArcade Watch App */,
 				9C9A7EEF2E37111A00C88391 /* WatchArcadeTests */,
 				9C9A7EF92E37111A00C88391 /* WatchArcadeUITests */,
-				9C9A7F062E37111A00C88391 /* WatchArcade Watch App */,
 				9C9A7F142E37111D00C88391 /* WatchArcade Watch AppTests */,
 				9C9A7F1E2E37111D00C88391 /* WatchArcade Watch AppUITests */,
 				9C9A7EE02E37111700C88391 /* Products */,
