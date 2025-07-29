@@ -100,10 +100,11 @@ struct PongGameView: View {
                 by: 0.0001,
                 sensitivity: .low,
                 isContinuous: true,
-                isHapticFeedbackEnabled: true
+                isHapticFeedbackEnabled: false
             )
             .onChange(of: crownValue) { newValue in
-                game.playerY = min(max(0.07, 1.0 - newValue), 0.93)
+                let normalized = max(0.0, min(1.0, newValue))
+                game.playerY = 0.07 + (0.86 * normalized)
             }
             .onAppear {
                 isFocused = true
@@ -141,30 +142,26 @@ struct PongGame {
         ball.x = max(0.0, min(1.0, ball.x))
         ball.y = max(0.0, min(1.0, ball.y))
 
-        // Reflect off top or bottom
         if ball.y <= 0 || ball.y >= 1 {
             velocity.dy *= -1
         }
 
-        // Collision with paddles
-        if ball.x >= 0.97 && abs(ball.y - playerY) < 0.1 {
+        if ball.x >= 0.97 && abs(ball.y - playerY) < 0.1 && velocity.dx > 0 {
             velocity.dx *= -1.05
             velocity.dy *= 1.05
             ball.x = 0.97
-        } else if ball.x <= 0.03 && abs(ball.y - botY) < 0.1 {
+        } else if ball.x <= 0.03 && abs(ball.y - botY) < 0.1 && velocity.dx < 0 {
             velocity.dx *= -1.05
             velocity.dy *= 1.05
             ball.x = 0.03
         }
 
-        // Scoring logic
-        var didScore = false
-        if ball.x > 1 {
+        if ball.x > 1.02 {
             botScore += 1
-            didScore = true
-        } else if ball.x < 0 {
+            reset()
+        } else if ball.x < -0.02 {
             playerScore += 1
-            didScore = true
+            reset()
         }
 
         if playerScore >= 10 {
@@ -173,14 +170,8 @@ struct PongGame {
             winner = "Bot"
         }
 
-        if didScore {
-            reset()
-        }
-
-        // Bot follows ball
-        botY += (ball.y - botY) * 0.04
+        botY += (ball.y - botY) * 0.02
     }
-
 
     func ballPosition(in size: CGSize) -> CGPoint {
         CGPoint(x: ball.x * size.width, y: ball.y * size.height)
@@ -246,10 +237,11 @@ struct BreakOutGameView: View {
                 by: 0.0001,
                 sensitivity: .low,
                 isContinuous: true,
-                isHapticFeedbackEnabled: true
+                isHapticFeedbackEnabled: false
             )
             .onChange(of: crownValue) { newValue in
-                game.paddleX = min(max(0.07, 1.0 - newValue), 0.93)
+                let normalized = max(0.0, min(1.0, newValue))
+                game.paddleX = 0.07 + (0.86 * normalized)
             }
             .onAppear {
                 isFocused = true
@@ -300,11 +292,11 @@ struct BreakOutGame {
             velocity.dy *= -1
         }
 
-        if ball.y >= 0.93 && abs(ball.x - paddleX) < 0.1 {
+        if ball.y >= 0.93 && abs(ball.x - paddleX) < 0.1 && velocity.dy > 0 {
             velocity.dy *= -1
         }
 
-        if ball.y > 1 {
+        if ball.y > 1.02 {
             reset()
         }
 
@@ -332,4 +324,3 @@ struct BreakOutGame {
         velocity = CGVector(dx: 0.0035 * (Bool.random() ? 1 : -1), dy: -0.0035)
     }
 }
-
