@@ -1,132 +1,133 @@
 import SwiftUI
-import Combine
 
-enum GameType {
-    case pong, breakout
-}
+// MARK: - Root View
 
 struct ContentView: View {
-    @State private var selectedGame: GameType = .pong
-    @State private var showSwipeText = true
+    @State private var selectedGame: String? = nil
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack(alignment: .top) {
-                Group {
-                    if selectedGame == .pong {
-                        PongView(size: geo.size)
-                    } else {
-                        BreakOutView(size: geo.size)
-                    }
-                }
-                .contentShape(Rectangle())
-                .gesture(
-                    DragGesture(minimumDistance: 20)
-                        .onEnded { gesture in
-                            if gesture.translation.height > 20 {
-                                selectedGame = selectedGame == .pong ? .breakout : .pong
-                                showSwipeText = true
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                    withAnimation {
-                                        showSwipeText = false
-                                    }
-                                }
-                            }
-                        }
-                )
+        VStack {
+            if selectedGame == nil {
+                VStack(spacing: 12) {
+                    Text("Watch Arcade")
+                        .font(.headline)
+                        .padding()
 
-                if showSwipeText {
-                    Text("Swipe down to switch game")
-                        .font(.footnote)
-                        .foregroundColor(.gray)
-                        .padding(.top, 5)
-                        .transition(.opacity)
-                        .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                withAnimation {
-                                    showSwipeText = false
-                                }
-                            }
-                        }
+                    Button("Play Pong") {
+                        selectedGame = "Pong"
+                    }
+                    .buttonStyle(.borderedProminent)
+
+                    Button("Play BreakOut") {
+                        selectedGame = "BreakOut"
+                    }
+                    .buttonStyle(.borderedProminent)
                 }
+            } else if selectedGame == "Pong" {
+                PongGameView(goBack: { selectedGame = nil })
+            } else if selectedGame == "BreakOut" {
+                BreakOutGameView(goBack: { selectedGame = nil })
             }
         }
     }
 }
 
-// MARK: - PongView
-struct PongView: View {
-    var size: CGSize
+// MARK: - Pong Game
+
+struct PongGameView: View {
     @State private var game = PongGame()
     @State private var crownValue: Double = 0.5
+    @FocusState private var isFocused: Bool
+    let goBack: () -> Void
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
 
     var body: some View {
-        ZStack {
-            // Midline
-            Rectangle()
-                .fill(Color.gray.opacity(0.3))
-                .frame(width: 1, height: size.height)
+        GeometryReader { geo in
+            ZStack {
+                Color.black.edgesIgnoringSafeArea(.all)
 
-            // Ball
-            Circle()
-                .frame(width: 10, height: 10)
-                .position(game.ballPosition(in: size))
+                Rectangle()
+                    .fill(Color.white.opacity(0.3))
+                    .frame(width: 1)
+                    .position(x: geo.size.width / 2, y: geo.size.height / 2)
 
-            // Player paddle (right)
-            Rectangle()
-                .frame(width: 6, height: 40)
-                .position(x: size.width - 10, y: size.height * game.playerY)
+                Circle()
+                    .frame(width: 6, height: 6)
+                    .position(game.ballPosition(in: geo.size))
 
-            // Bot paddle (left)
-            Rectangle()
-                .frame(width: 6, height: 40)
-                .position(x: 10, y: size.height * game.botY)
+                Rectangle()
+                    .frame(width: 4, height: 20)
+                    .position(x: 10, y: geo.size.height * game.botY)
 
-            // Scores
-            VStack {
-                HStack {
-                    Text("\(game.botScore)")
-                        .font(.system(size: 24, weight: .bold))
-                        .foregroundColor(.gray)
-                        .opacity(0.5)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("\(game.playerScore)")
-                        .font(.system(size: 24, weight: .bold))
-                        .foregroundColor(.gray)
-                        .opacity(0.5)
-                        .frame(maxWidth: .infinity, alignment: .trailing)
+                Rectangle()
+                    .frame(width: 4, height: 20)
+                    .position(x: geo.size.width - 10, y: geo.size.height * game.playerY)
+
+                VStack {
+                    HStack {
+                        Text("\(game.botScore)")
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Text("\(game.playerScore)")
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                    }
+                    Spacer()
                 }
-                Spacer()
-            }
+                .padding(.horizontal, 16)
 
-            // Win text
-            if game.winner != nil {
-                Text("\(game.winner!) Wins!")
-                    .font(.title2)
-                    .bold()
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.black.opacity(0.7))
-                    .cornerRadius(10)
+                if let winner = game.winner {
+                    VStack {
+                        Text("\(winner) Wins!")
+                            .font(.headline)
+                            .bold()
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.black.opacity(0.7))
+                            .cornerRadius(10)
+                        Button("Back") {
+                            goBack()
+                        }
+                    }
+                }
             }
-        }
-        .focusable(true)
-        .digitalCrownRotation($crownValue, from: 0, through: 1, by: 0.01, sensitivity: .medium, isContinuous: true, isHapticFeedbackEnabled: true)
-        .onChange(of: crownValue) { newValue in
-            game.playerY = min(max(0, newValue), 1)
-        }
-        .onReceive(timer) { _ in
-            game.update()
+            .focusable(true)
+            .focused($isFocused)
+            .digitalCrownRotation(
+                $crownValue,
+                from: 0.0,
+                through: 1.0,
+                by: 0.0001,
+                sensitivity: .low,
+                isContinuous: true,
+                isHapticFeedbackEnabled: true
+            )
+            .onChange(of: crownValue) { newValue in
+                game.playerY = min(max(0.07, 1.0 - newValue), 0.93)
+            }
+            .onAppear {
+                isFocused = true
+            }
+            .onReceive(timer) { _ in
+                game.update()
+            }
+            .gesture(
+                DragGesture(minimumDistance: 20)
+                    .onEnded { value in
+                        if value.translation.height > 20 {
+                            goBack()
+                        }
+                    }
+            )
         }
     }
 }
 
 struct PongGame {
     var ball = CGPoint(x: 0.5, y: 0.5)
-    var velocity = CGVector(dx: -0.005, dy: 0.004)
-    var playerY: CGFloat = 0.5
-    var botY: CGFloat = 0.5
+    var velocity = CGVector(dx: -0.0035, dy: 0.0035)
+    var playerY = 0.5
+    var botY = 0.5
     var playerScore = 0
     var botScore = 0
     var winner: String? = nil
@@ -137,158 +138,198 @@ struct PongGame {
         ball.x += velocity.dx
         ball.y += velocity.dy
 
-        // Bounce top/bottom
+        ball.x = max(0.0, min(1.0, ball.x))
+        ball.y = max(0.0, min(1.0, ball.y))
+
+        // Reflect off top or bottom
         if ball.y <= 0 || ball.y >= 1 {
             velocity.dy *= -1
         }
 
-        // Bot AI
-        if botY < ball.y {
-            botY += 0.004
-        } else {
-            botY -= 0.004
-        }
-        botY = min(max(botY, 0), 1)
-
-        // Collision with player paddle (right)
-        if ball.x >= 0.98,
-           abs(ball.y - playerY) < 0.07 {
-            ball.x = 0.98
-            velocity.dx *= -1
+        // Collision with paddles
+        if ball.x >= 0.97 && abs(ball.y - playerY) < 0.1 {
+            velocity.dx *= -1.05
+            velocity.dy *= 1.05
+            ball.x = 0.97
+        } else if ball.x <= 0.03 && abs(ball.y - botY) < 0.1 {
+            velocity.dx *= -1.05
+            velocity.dy *= 1.05
+            ball.x = 0.03
         }
 
-        // Collision with bot paddle (left)
-        if ball.x <= 0.02,
-           abs(ball.y - botY) < 0.07 {
-            ball.x = 0.02
-            velocity.dx *= -1
-        }
-
-        // Missed by player
+        // Scoring logic
+        var didScore = false
         if ball.x > 1 {
             botScore += 1
-            resetBall(toPlayer: false)
-        }
-
-        // Missed by bot
-        if ball.x < 0 {
+            didScore = true
+        } else if ball.x < 0 {
             playerScore += 1
-            resetBall(toPlayer: true)
+            didScore = true
         }
 
-        // Win condition
         if playerScore >= 10 {
             winner = "Player"
         } else if botScore >= 10 {
             winner = "Bot"
         }
+
+        if didScore {
+            reset()
+        }
+
+        // Bot follows ball
+        botY += (ball.y - botY) * 0.04
     }
 
-    mutating func resetBall(toPlayer: Bool) {
-        ball = CGPoint(x: 0.5, y: 0.5)
-        velocity = CGVector(dx: toPlayer ? -0.005 : 0.005, dy: CGFloat.random(in: -0.004...0.004))
-    }
 
     func ballPosition(in size: CGSize) -> CGPoint {
-        CGPoint(x: size.width * ball.x, y: size.height * ball.y)
+        CGPoint(x: ball.x * size.width, y: ball.y * size.height)
+    }
+
+    mutating func reset() {
+        ball = CGPoint(x: 0.5, y: 0.5)
+        velocity = CGVector(dx: 0.0035 * (Bool.random() ? 1 : -1), dy: 0.0035 * (Bool.random() ? 1 : -1))
     }
 }
 
-// MARK: - BreakOutView (unchanged)
-struct BreakOutView: View {
-    var size: CGSize
+// MARK: - BreakOut Game
+
+struct BreakOutGameView: View {
     @State private var game = BreakOutGame()
+    @State private var crownValue: Double = 0.5
+    @FocusState private var isFocused: Bool
+    let goBack: () -> Void
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
 
     var body: some View {
-        ZStack {
-            // Bricks
-            ForEach(game.bricks.indices, id: \.self) { index in
-                if game.bricks[index].isActive {
-                    Rectangle()
-                        .frame(width: 30, height: 10)
-                        .position(game.bricks[index].position(in: size))
+        GeometryReader { geo in
+            ZStack {
+                Color.black.edgesIgnoringSafeArea(.all)
+
+                ForEach(game.bricks, id: \.self) { brick in
+                    if !brick.hit {
+                        let brickWidth = geo.size.width / 6 - 4
+                        Rectangle()
+                            .fill(Color.green)
+                            .frame(width: brickWidth, height: 10)
+                            .position(
+                                x: CGFloat(brick.col) * geo.size.width / 6 + geo.size.width / 12,
+                                y: CGFloat(brick.row) * 14 + 30
+                            )
+                    }
                 }
+
+                Circle()
+                    .frame(width: 8, height: 8)
+                    .position(game.ballPosition(in: geo.size))
+
+                Rectangle()
+                    .frame(width: 40, height: 6)
+                    .position(x: game.paddleX * geo.size.width, y: geo.size.height - 20)
+
+                VStack {
+                    HStack {
+                        Text("Score: \(game.score)")
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    Spacer()
+                }
+                .padding(.horizontal, 16)
             }
-
-            // Ball
-            Circle()
-                .frame(width: 10, height: 10)
-                .position(game.ballPosition(in: size))
-
-            // Paddle
-            Rectangle()
-                .frame(width: 50, height: 10)
-                .position(x: size.width * game.paddlePosition, y: size.height - 20)
-        }
-        .gesture(
-            DragGesture()
-                .onChanged { value in
-                    let width = size.width
-                    game.paddlePosition = min(max(0, value.location.x / width), 1)
-                }
-        )
-        .onReceive(timer) { _ in
-            game.update(in: size)
+            .focusable(true)
+            .focused($isFocused)
+            .digitalCrownRotation(
+                $crownValue,
+                from: 0.0,
+                through: 1.0,
+                by: 0.0001,
+                sensitivity: .low,
+                isContinuous: true,
+                isHapticFeedbackEnabled: true
+            )
+            .onChange(of: crownValue) { newValue in
+                game.paddleX = min(max(0.07, 1.0 - newValue), 0.93)
+            }
+            .onAppear {
+                isFocused = true
+            }
+            .onReceive(timer) { _ in
+                game.update()
+            }
+            .gesture(
+                DragGesture(minimumDistance: 20)
+                    .onEnded { value in
+                        if value.translation.height > 20 {
+                            goBack()
+                        }
+                    }
+            )
         }
     }
 }
 
 struct BreakOutGame {
-    var paddlePosition = CGFloat(0.5)
-    var ballPos = CGPoint(x: 0.5, y: 0.5)
-    var ballVel = CGVector(dx: 0.01, dy: 0.01)
-    var bricks: [Brick] = []
+    var ball = CGPoint(x: 0.5, y: 0.5)
+    var velocity = CGVector(dx: 0.0035, dy: -0.0035)
+    var paddleX = 0.5
+    var score = 0
 
-    init() {
-        for row in 0..<3 {
-            for col in 0..<5 {
-                bricks.append(Brick(x: CGFloat(col) * 0.2 + 0.1, y: CGFloat(row) * 0.05 + 0.1))
-            }
-        }
+    struct Brick: Hashable {
+        let row: Int
+        let col: Int
+        var hit: Bool = false
     }
 
-    mutating func update(in size: CGSize) {
-        ballPos.x += ballVel.dx
-        ballPos.y += ballVel.dy
+    var bricks: [Brick] = (0..<4).flatMap { row in
+        (0..<6).map { col in Brick(row: row, col: col) }
+    }
 
-        if ballPos.x <= 0 || ballPos.x >= 1 {
-            ballVel.dx *= -1
+    mutating func update() {
+        ball.x += velocity.dx
+        ball.y += velocity.dy
+
+        ball.x = max(0.0, min(1.0, ball.x))
+        ball.y = max(0.0, min(1.0, ball.y))
+
+        if ball.x <= 0 || ball.x >= 1 {
+            velocity.dx *= -1
         }
 
-        if ballPos.y <= 0 {
-            ballVel.dy *= -1
+        if ball.y <= 0 {
+            velocity.dy *= -1
         }
 
-        if ballPos.y >= 0.95,
-           abs(ballPos.x - paddlePosition) < 0.1 {
-            ballVel.dy *= -1
+        if ball.y >= 0.93 && abs(ball.x - paddleX) < 0.1 {
+            velocity.dy *= -1
+        }
+
+        if ball.y > 1 {
+            reset()
         }
 
         for i in bricks.indices {
-            let brickCenter = bricks[i].position(in: size)
-            let ballCenter = CGPoint(x: size.width * ballPos.x, y: size.height * ballPos.y)
+            guard !bricks[i].hit else { continue }
 
-            if bricks[i].isActive &&
-               abs(ballCenter.x - brickCenter.x) < 20 &&
-               abs(ballCenter.y - brickCenter.y) < 10 {
-                bricks[i].isActive = false
-                ballVel.dy *= -1
+            let brickX = CGFloat(bricks[i].col) / 6.0 + 1.0 / 12.0
+            let brickY = CGFloat(bricks[i].row) * 0.04 + 0.1
+
+            if abs(ball.x - brickX) < 0.08 && abs(ball.y - brickY) < 0.025 {
+                bricks[i].hit = true
+                velocity.dy *= -1
+                score += 1
+                break
             }
         }
     }
 
     func ballPosition(in size: CGSize) -> CGPoint {
-        CGPoint(x: size.width * ballPos.x, y: size.height * ballPos.y)
+        CGPoint(x: ball.x * size.width, y: ball.y * size.height)
+    }
+
+    mutating func reset() {
+        ball = CGPoint(x: 0.5, y: 0.5)
+        velocity = CGVector(dx: 0.0035 * (Bool.random() ? 1 : -1), dy: -0.0035)
     }
 }
 
-struct Brick {
-    var x: CGFloat
-    var y: CGFloat
-    var isActive = true
-
-    func position(in size: CGSize) -> CGPoint {
-        CGPoint(x: size.width * x, y: size.height * y)
-    }
-}
